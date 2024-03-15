@@ -1,0 +1,138 @@
+/* *IMPORT FONT* */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap");
+:root {
+  /* Colors */
+  --body-color: #ecf8ff;
+  --container: #fff;
+  --name: #141414;
+  --second-color: #c5c5c5;
+  --twitter-color: #1da1f2;
+  /* FONT */
+  --body-font: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 601px;
+    height: 228px;
+    background-color: var(--container);
+    border: 1px solid rgba(29, 160, 242, 0.188);
+    border-radius: 10px;
+    padding: 35px 31px;
+    box-shadow: 0 15px 60px rgba(29, 160, 242, 0.171);
+}
+
+.headline{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headline .profile{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.headline .profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile .title-profile .title-name{
+    font-size: 18px;
+    color: var(--name);
+    font-weight: 700;
+}
+
+.profile .title-profile .title-user{
+    font-size: 16px;
+    color: var(--second-color);
+    font-weight: 300;
+}
+
+.headline .icon-twitter{
+    width: max-content;
+    height: max-content;
+    margin: auto 0;
+    font-size: 30px;
+    color: var(--twitter-color);
+    cursor: pointer;
+}
+
+.tweet{
+    margin: 15px 0;
+}
+
+.tweet p{
+    font-size: 16px;
+    color: var(--name);
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.tweet .hashtag{
+    color: var(--twitter-color);
+}
+
+.date-posted{
+    display: flex;
+    gap: 20px;
+}
+
+.date-posted .likes{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-posted .likes i{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* icon like if clicked */
+.ri-heart-fill{
+    color: #ee2d2d;
+}
+
+.date-posted .likes .like{
+    color: var(--second-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.date-posted .date-time-post{
+    display: flex;
+    align-items: center;
+}
+
+.date-posted .date-time-post .date-time{
+    color: var(--second-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+@media screen and (max-width: 468px){
+    .container{
+        height: 280px;
+    }
+}

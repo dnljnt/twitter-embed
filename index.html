@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Embed</title>
+    <!-- * link to css -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- * LINK ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="headline">
+            <div class="profile">
+                <img src="img/jeta.jpg" alt="profile-picture">
+                <div class="title-profile">
+                    <h5 class="title-name">Vestia Zeta</h5>
+                    <span class="title-user">@zeta_.</span>
+                </div>
+            </div>
+            <div class="icon-twitter">
+                <i class="ri-twitter-x-fill"></i>
+            </div>
+        </div>
+        <div class="tweet">
+            <p>
+                Why do they call it 'debugging' when it feels more like 'wildly guessing and hoping for the best'? <span class="hashtag">#programming #coding #debugging</span>
+            </p>
+        </div>
+        <div class="date-posted">
+            <div class="likes">
+                <i class="ri-heart-line" id="likes"></i>
+                <span class="like">1.5k</span>
+            </div>
+            <div class="date-time-post">
+                <span class="date-time">3:40 - Oct 14, 2023</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const likes = document.querySelector("#likes");
+        let isLiked = false;
+        likes.addEventListener("click", () =>{
+            console.log("success click");
+            if(isLiked){
+                likes.classList.remove("ri-heart-fill");
+                likes.classList.add("ri-heart-line");
+            }else{
+                likes.classList.remove("ri-heart-line");
+                likes.classList.add("ri-heart-fill");
+            }
+            isLiked = !isLiked;
+        })
+    </script>
+</body>
+</html>
